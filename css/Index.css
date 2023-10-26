@@ -1,0 +1,86 @@
+.botones a {
+    font-size: .7rem;
+}
+body { 
+    background-color: #165ca1d7;
+    color: #eaecea;
+}
+.card:hover {
+    box-shadow: 0 0 15px lightgray;
+}
+#carrusel {
+    margin-bottom: 40px;
+    width: 75%; /* Tamaño inicial del carrusel */
+    transition: width 0.6s ease; /* Transición suave para el cambio de tamaño */
+  }
+  
+  #carrusel:hover {
+    width: 100%; /* Tamaño al pasar el ratón por encima */
+  }
+  
+
+.textoChico {
+    margin-bottom: 40px;
+    font-size: 4%;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, Geneva, Tahoma, sans-serif;
+}
+
+.bgGrisOscuro {
+    background-color: rgb(65, 65, 65);
+}
+
+.brilloOscuro {
+    filter:brightness(50%);
+}
+.custom-celeste-bg {
+    background-color: #1d76ce;
+}
+
+.row {
+    margin-bottom: 100px;
+}
+.orador-card {
+    width: 18rem;
+    height: 100%;
+}
+
+.orador-img {
+    object-fit: fill;
+    width: 20rem;;
+    height: 40rem; 
+}
+
+.orador-card {
+    background-color: #002244c2;
+    color: white;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.orador-card:hover {
+    transform: scale(1.1);
+}
+
+.orador-card:hover .orador-img {
+    transform: scaleX(1.2);
+}
+
+.orador-img {
+    transition: transform 0.1s;
+}
+
+/* Estilo botón "Enviar" */
+input[type="submit"].btn-enviar {
+    width: 50%;
+    height: 50px;
+    color: black;
+}
+
+input[type="submit"].btn-enviar:hover {
+    background-color: #FFCC00;
+}
+.container-border {
+    border: 1px solid #ccc; 
+    padding: 15px; 
+    margin-bottom: 80px; 
+}
