@@ -1,115 +1,96 @@
-.botones a {
-    font-size: .7rem;
-}
-body { 
-    background-color: #165ca1d7;
-    color: #eaecea;
-}
-.card:hover {
-    box-shadow: 0 0 15px lightgray;
-}
-#carrusel {
-    margin-bottom: 40px;
-    width: 75%; /* Tamaño inicial del carrusel */
-    transition: width 0.6s ease; /* Transición suave para el cambio de tamaño */
-  }
-  
-  #carrusel:hover {
-    width: 100%; /* Tamaño al pasar el ratón por encima */
-  }
-  
-
-.textoChico {
-    margin-bottom: 40px;
-    font-size: 4%;
-font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, Geneva, Tahoma, sans-serif;
-}
-
-.bgGrisOscuro {
-    background-color: rgb(65, 65, 65);
-}
-
-.brilloOscuro {
-    filter:brightness(50%);
-}
-.custom-celeste-bg {
+/* Estilos del Header */
+#new-header {
     background-color: #1d76ce;
-}
-
-.row {
-    margin-bottom: 50px;
+    color: #fff;
+    padding: 15px 20px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
 }
 
-.orador-card {
-    width: 20rem;
-    height: 22rem;
-    background-color: #002244c2;
-    color: white;
-    overflow: hidden;
-    transition: transform 0.4s ease, box-shadow 0.4s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-}
-
-.orador-card:hover {
-    transform: scale(1.05) translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.orador-card:hover ~ .orador-card {
-    transform: translateX(0);
-}
-
-.orador-img {
-    object-fit: cover;
-    width: 100%;
-    height: 40%;
-    transition: transform 0.4s;
-}
-
-.orador-card:hover .orador-img {
-    height: 100%;
-}
-
-.card-body {
-    transition: transform 0.4s, font-size 0.4s;
-}
-
-.orador-card:hover .card-body {
-    transform: scale(1.05);
-}
-
-.card-title,
-.card-text {
+#new-header h1 {
     margin: 0;
+    font-size: 2em;
+    text-shadow: 2px 2px 4px #0a4678, 2px 2px 6px #0a4678;
+    color: #e6ac00;
+    transition: color 0.3s ease;
 }
 
-.orador-card .botones {
+#new-header .header-logo {
     display: flex;
-    justify-content: space-between;
-    margin-top: 1rem;
-    padding: 0 1rem;
+    align-items: center;
 }
 
-.orador-card .botones a {
-    font-size: 1em;
-    transition: transform 0.3s;
+#new-header .header-menu {
+    display: flex;
+    gap: 30px;
 }
 
-.orador-card:hover .botones a {
-    transform: scale(1.2);
+#new-header a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: color 0.3s ease;
 }
 
-.orador-card .botones a:last-child {
-    margin-right: 0;
+#new-header a:hover {
+    text-decoration: underline;
+    color: #ffcc00;
 }
 
-/* Efecto en la página */
+#new-header:hover {
+    background-color: #155799;
+}
+
+#new-header:hover h1 {
+    color: #fff;
+}
+
+/* Resto del código permanece igual */
+
+/* Media Query para pantallas pequeñas (por ejemplo, smartphones) */
+@media (max-width: 767px) {
+    #new-header {
+        flex-direction: column; /* Cambia la dirección de flex a columna para mejor apilamiento en pantallas pequeñas */
+        align-items: flex-start; /* Alinea los elementos al principio */
+    }
+
+    #new-header h1 {
+        font-size: 1.5em; /* Reduce el tamaño del título en pantallas pequeñas */
+        margin-bottom: 10px; /* Añade un pequeño espacio entre el logo y el título */
+    }
+
+    #new-header .header-menu {
+        margin-left: 0; /* Elimina el margen izquierdo en pantallas pequeñas */
+        margin-top: 10px; /* Añade un pequeño espacio entre el título y el menú */
+    }
+    
+    #new-header a {
+        font-size: 1em; /* Reduce el tamaño de los enlaces en pantallas pequeñas */
+    }
+}
+
+
+#new-header a:hover {
+    text-decoration: underline;
+    color: #ffcc00;
+}
+
+#new-header:hover {
+    background-color: #155799;
+}
+
+#new-header:hover h1 {
+    color: #fff;
+}
+
+
+/* Estilos Generales */
 body {
-    background: linear-gradient(to right, #001c39, #002244);
-    color: white;
+    background-color: #111;
+    color: #eee;
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
@@ -127,19 +108,207 @@ body {
     transform: translateY(0);
 }
 
+/* Modo Oscuro para la Página */
+.bg-dark {
+    background-color: #111 !important;
+}
 
-/* Estilo botón "Enviar" */
-input[type="submit"].btn-enviar {
+/* Botones */
+.btn {
+    border-radius: 8px;
+}
+
+/* Estilos del Carrusel */
+#carrusel {
+    margin-top: 20px;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.carousel-caption h5 {
+    color: #fff;
+}
+
+.carousel-caption p {
+    color: #ddd;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #1d76ce;
+    border-radius: 50%;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1);
+}
+
+.carousel-inner img {
+    max-width: 100%;
+    height: auto;
+}
+
+.btn-enviar {
     width: 50%;
     height: 40px;
-    color: black;
+    color: #111;
 }
 
-input[type="submit"].btn-enviar:hover {
+.btn-enviar:hover {
     background-color: #FFCC00;
 }
+
+.btn-enviar {
+    width: 50%;
+    height: 40px;
+    color: #111;
+}
+
+.btn-enviar:hover {
+    background-color: #FFCC00;
+}
+
+
+/* Tarjetas de Oradores */
+.orador-card {
+    width: 20rem;
+    height: 22rem;
+    background-color: #222;
+    color: white;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.orador-card:hover {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.orador-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+.orador-img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.4s;
+}
+
+.orador-card:hover .orador-img {
+    height: 100%;
+}
+
+
+.card-title {
+    margin: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    font-size: 16px;
+    transition: font-size 0, 4s;
+}
+
+.orador-card:hover .card-title {
+    font-size: 2em;
+}
+
+.card-body {
+    transition: transform 0.4s, font-size 0.4s;
+}
+
+.card-body {
+    background: rgba(34, 34, 34, 0.8);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    height: 0;
+    /* Inicialmente oculta */
+    color: white;
+    overflow: hidden;
+    transition: height 0.4s;
+}
+
+.orador-card .botones {
+    display: none;
+    justify-content: space-between;
+    margin-top: 1rem;
+    padding: 0 1rem;
+}
+
+.orador-card .botones a {
+    font-size: 1em;
+    transition: transform 0.3s;
+    display: inline-block;
+}
+
+.orador-card:hover .botones {
+    transform: scale(1.1);
+    display: flex;
+    justify-content: space-around;
+    margin-top: 0.8rem;
+}
+
+
+.orador-card:hover .card-body {
+    height: 100%;
+}
+
+.orador-card .botones img {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+}
+
 .container-border {
-    border: 1px solid #ccc; 
-    padding: 15px; 
-    margin-bottom: 80px; 
+    border: 1px solid #333;
+    padding: 15px;
+    margin-bottom: 80px;
+}
+
+/* Modo Oscuro para el Footer */
+.bg-dark.text-white {
+    background-color: #333 !important;
+}
+
+.card:hover {
+    box-shadow: 0 0 15px #666;
+}
+
+.textoChico {
+    margin-bottom: 40px;
+    font-size: 4%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, Geneva, Tahoma, sans-serif;
+}
+
+/* Navbar */
+.custom-celeste-bg {
+    background-color: #1d76ce;
+}
+
+/* Espaciado para Filas */
+.row {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
 }
