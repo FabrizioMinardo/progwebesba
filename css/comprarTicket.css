@@ -1,0 +1,175 @@
+/* Estilos del Header en la página de compra de tickets */
+#new-header {
+    background-color: #1d76ce;
+    color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+#new-header h1 {
+    margin: 0;
+    font-size: 2em;
+    text-shadow: 2px 2px 4px #0a4678, 2px 2px 6px #0a4678;
+    color: #e6ac00;
+    transition: color 0.3s ease;
+}
+
+#new-header .header-logo {
+    display: flex;
+    align-items: center;
+}
+
+#new-header .header-menu {
+    display: flex;
+    gap: 30px;
+}
+
+#new-header a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: color 0.3s ease;
+}
+
+#new-header a:hover {
+    text-decoration: underline;
+    color: #ffcc00;
+}
+
+#new-header:hover {
+    background-color: #155799;
+}
+
+#new-header:hover h1 {
+    color: #fff;
+}
+
+/* Media Query para pantallas pequeñas (por ejemplo, smartphones) */
+@media (max-width: 767px) {
+    #new-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #new-header h1 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+
+    #new-header .header-menu {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    #new-header a {
+        font-size: 1em;
+    }
+}
+
+/* Estilos Generales */
+body {
+    background-color: #111;
+    color: #eee;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+
+/* Modo Oscuro para la Página */
+.bg-dark {
+    background-color: #111 !important;
+}
+
+body {
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.form-label {
+    font-size: 1.2rem;
+    color: #fff; /* Texto blanco */
+}
+
+.form-control, .form-select {
+    background-color: #333; /* Color de fondo gris oscuro */
+    color: #fff; /* Texto blanco */
+    border: 1px solid #fff; /* Borde blanco */
+}
+
+.form-control:focus, .form-select:focus {
+    background-color: #555; /* Color de fondo más oscuro al hacer foco */
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.btn-primary {
+    background-color: #2d8999; /* Color de fondo verde oscuro */
+    border: 1px solid #2d8997;
+}
+
+.btn-primary:hover {
+    background-color: #45a049; /* Color más oscuro al hacer hover */
+    border: 1px solid #45a049;
+}
+
+#total {
+    color: #c4ba35; /* Color rosa oscuro para el total a pagar */
+}
+
+.bg-info {
+    background-color: #333; /* Color de fondo gris oscuro para la sección de total a pagar */
+}
+
+
+/* Modo Oscuro para el Footer */
+.bg-dark.text-white {
+    background-color: #333 !important;
+}
+
+/* Navbar */
+.custom-celeste-bg {
+    background-color: #1d76ce;
+}
+
+/* Espaciado para Filas */
+.row {
+    margin-bottom: 50px;
+    /* Ajusta el espacio entre el formulario y el footer */
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Estilos del formulario de compra de tickets */
+.comprar-ticket-form {
+    margin-bottom: 20px;
+    /* Ajusta el espacio entre el formulario y el footer */
+
+}
+
+#footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65%;
+    height: 90px; /* Ajusta la altura según tus necesidades */
+    background-color: #333 !important; /* Utiliza el mismo color de fondo */
+    color: #fff; /* Utiliza el mismo color del texto */
+    text-align: right; /* Centra el contenido del footer */
+    line-height: 100px; /* Ajusta la altura de línea para centrar verticalmente */
+    margin: 0 auto; /* Centra horizontalmente el footer */
+}
+#footer img {
+    width: cover; /* Ajusta el tamaño de la imagen según tus necesidades */
+    height: cover; /* Mantiene la proporción original de la imagen */
+
+}

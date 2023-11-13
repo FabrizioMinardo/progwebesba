@@ -9,8 +9,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="css/Index.css">
-    <link rel="stylesheet" href="css/NuevoHeader.css">
-
 </head>
 
 <body id="body" class="bg-dark">
@@ -21,19 +19,17 @@
             <h1>CONFERENCIAS B.A</h1>
         </div>
         <div class="header-menu">
-            <a href="#">Las Conferencias</a>
+            <a href="index.html">Las Conferencias</a>
             <a href="#">Los Oradores</a>
-            <a href="ticket/comprarTicket.html" class="text-warning">QUIERO ASISTIR!</a>
+            <a href="comprarTicket.html" class="text-warning">QUIERO ASISTIR!</a>
         </div>
     </div>
 </body>
 
 </html>
+<!-- fin del menu -->
 
-    </nav> 
-   <!-- fin del menu -->
-
-    <!-- Carrusel -->
+<!-- Carrusel -->
 <div id="carrusel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
         <button type="button" data-bs-target="#carrusel" data-bs-slide-to="0" class="active" aria-current="true"
@@ -46,10 +42,10 @@
             <img src="Imagenes/Conferencia 1.jpg" class="d-block w-100 brilloOscuro" alt="Conferencia 1">
             <div class="carousel-caption d-md-block text-start">
                 <h5 class="fs-3">Conferencias B.A</h5>
-                <p>¿Te apasiona la tecnología y quieres aprender de los mejores? No te pierdas las Conferencias B.A, el evento más importante del año para los amantes de la innovación.</p>
+                <p>¿Te apasiona la tecnología y queres aprender de los mejores? No te pierdas las Conferencias B.A, el
+                    evento más importante del año para los amantes de la innovación.</p>
                 <div class="mb-4">
-                    <a href="#" class="btn btn-outline-light">Horarios</a>
-                    <a href="#" class="btn btn-warning">Quiero asistir</a>
+                    <a href="ticket/comprarTicket.html" class="btn btn-warning">Quiero asistir</a>
                 </div>
             </div>
         </div>
@@ -76,185 +72,184 @@
     </button>
 </div>
 
-    <!-- oradores -->
+<!-- oradores -->
 
-    <div class="container-fluid show">
-        <div class="text-center m-1">
-            <div class="textoChico">
-                <span class="fs-4 text-white">ORADORES MAS IMPORTANTES</span>
+<div class="container-fluid show">
+    <div class="text-center m-1">
+        <div class="textoChico">
+            <span class="fs-4 text-white">ORADORES MAS IMPORTANTES</span>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Orador 1 -->
+        <div class="col-md-4">
+            <div class="card mx-1 orador-card">
+                <img src="Imagenes/Anders.jpeg" class="card-img-top orador-img img-fluid rounded" alt="Anders">
+                <div class="card-body">
+                    <div class="botones mb-3">
+                        <a href="#" class="btn btn-sm btn-info text-white">
+                            <img src="Imagenes/facebook.png" alt="Facebook" class="me-1"> Facebook
+                        </a>
+                        <a href="#" class="btn btn-sm btn-danger text-white">
+                            <img src="Imagenes/instagram.png" alt="Instagram" class="me-1"> Instagram
+                        </a>
+                    </div>
+                    <h5 class="card-title">Anders Hejlsberg</h5>
+                    <p class="card-text">Credenciales: El padre original de "Turbo Pascal" el primer IDE.</p>
+                </div>
             </div>
         </div>
 
-        <div class="row">
-            <!-- Orador 1 -->
-            <div class="col-md-4">
-                <div class="card mx-1 orador-card">
-                    <img src="Imagenes/Anders.jpeg" class="card-img-top orador-img img-fluid rounded" alt="Anders">
-                    <div class="card-body">
-                        <div class="botones mb-3">
-                            <a href="#" class="btn btn-sm btn-info text-white">
-                                <img src="Imagenes/facebook.png" alt="Facebook" class="me-1"> Facebook
-                            </a>
-                            <a href="#" class="btn btn-sm btn-danger text-white">
-                                <img src="Imagenes/instagram.png" alt="Instagram" class="me-1"> Instagram
-                            </a>
-                        </div>
-                        <h5 class="card-title">Anders Hejlsberg</h5>
-                        <p class="card-text">Credenciales: El padre original de "Turbo Pascal" el primer IDE.</p>
+        <!-- Orador 2 -->
+        <div class="col-md-4">
+            <div class="card mx-1 orador-card">
+                <img src="Imagenes/Sanjay.jpeg" class="card-img-top orador-img img-fluid rounded" alt="Sanjay">
+                <div class="card-body">
+                    <div class="botones mb-3">
+                        <a href="#" class="btn btn-sm btn-info text-white">
+                            <img src="Imagenes/facebook.png" alt="Facebook" class="me-1"> Facebook
+                        </a>
+                        <a href="#" class="btn btn-sm btn-danger text-white">
+                            <img src="Imagenes/instagram.png" alt="Instagram" class="me-1"> Instagram
+                        </a>
                     </div>
+                    <h5 class="card-title">Sanjay Ghemawat</h5>
+                    <p class="card-text">Credenciales: Ayudó a diseñar e implementar algunos sistemas de google.</p>
                 </div>
             </div>
+        </div>
 
-            <!-- Orador 2 -->
-            <div class="col-md-4">
-                <div class="card mx-1 orador-card">
-                    <img src="Imagenes/Sanjay.jpeg" class="card-img-top orador-img img-fluid rounded" alt="Sanjay">
-                    <div class="card-body">
-                        <div class="botones mb-3">
-                            <a href="#" class="btn btn-sm btn-info text-white">
-                                <img src="Imagenes/facebook.png" alt="Facebook" class="me-1"> Facebook
-                            </a>
-                            <a href="#" class="btn btn-sm btn-danger text-white">
-                                <img src="Imagenes/instagram.png" alt="Instagram" class="me-1"> Instagram
-                            </a>
-                        </div>
-                        <h5 class="card-title">Sanjay Ghemawat</h5>
-                        <p class="card-text">Credenciales: Ayudó a diseñar e implementar algunos sistemas de google.</p>
+        <!-- Orador 3 -->
+        <div class="col-md-4">
+            <div class="card mx-1 orador-card">
+                <img src="Imagenes/Adam.jpeg" class="card-img-top orador-img img-fluid rounded" alt="Adam">
+                <div class="card-body">
+                    <div class="botones mb-3">
+                        <a href="#" class="btn btn-sm btn-info text-white">
+                            <img src="Imagenes/facebook.png" alt="Facebook" class="me-1"> Facebook
+                        </a>
+                        <a href="#" class="btn btn-sm btn-danger text-white">
+                            <img src="Imagenes/instagram.png" alt="Instagram" class="me-1"> Instagram
+                        </a>
                     </div>
+                    <h5 class="card-title">Adam D'Angelo</h5>
+                    <p class="card-text">Credenciales: Ingeniero en Facebook.</p>
                 </div>
             </div>
+        </div>
 
-            <!-- Orador 3 -->
-            <div class="col-md-4">
-                <div class="card mx-1 orador-card">
-                    <img src="Imagenes/Adam.jpeg" class="card-img-top orador-img img-fluid rounded" alt="Adam">
-                    <div class="card-body">
-                        <div class="botones mb-3">
-                            <a href="#" class="btn btn-sm btn-info text-white">
-                                <img src="Imagenes/facebook.png" alt="Facebook" class="me-1"> Facebook
-                            </a>
-                            <a href="#" class="btn btn-sm btn-danger text-white">
-                                <img src="Imagenes/instagram.png" alt="Instagram" class="me-1"> Instagram
-                            </a>
-                        </div>
-                        <h5 class="card-title">Adam D'Angelo</h5>
-                        <p class="card-text">Credenciales: Ingeniero en Facebook.</p>
+        <!-- Orador 4 -->
+        <div class="col-md-4">
+            <div class="card mx-1 orador-card">
+                <img src="Imagenes/Jeff.jpeg" class="card-img-top orador-img img-fluid rounded" alt="Jeff">
+                <div class="card-body">
+                    <div class="botones mb-3">
+                        <a href="#" class="btn btn-sm btn-info text-white">
+                            <img src="Imagenes/facebook.png" alt="Facebook" class="me-1"> Facebook
+                        </a>
+                        <a href="#" class="btn btn-sm btn-danger text-white">
+                            <img src="Imagenes/instagram.png" alt="Instagram" class="me-1"> Instagram
+                        </a>
                     </div>
+                    <h5 class="card-title">Jeff Bezos</h5>
+                    <p class="card-text">Credenciales: Fundador y CEO de Amazon, la empresa de comercio electrónico
+                        más grande del mundo.</p>
                 </div>
             </div>
+        </div>
 
-            <!-- Orador 4 -->
-            <div class="col-md-4">
-                <div class="card mx-1 orador-card">
-                    <img src="Imagenes/Jeff.jpeg" class="card-img-top orador-img img-fluid rounded" alt="Jeff">
-                    <div class="card-body">
-                        <div class="botones mb-3">
-                            <a href="#" class="btn btn-sm btn-info text-white">
-                                <img src="Imagenes/facebook.png" alt="Facebook" class="me-1"> Facebook
-                            </a>
-                            <a href="#" class="btn btn-sm btn-danger text-white">
-                                <img src="Imagenes/instagram.png" alt="Instagram" class="me-1"> Instagram
-                            </a>
-                        </div>
-                        <h5 class="card-title">Jeff Bezos</h5>
-                        <p class="card-text">Credenciales: Fundador y CEO de Amazon, la empresa de comercio electrónico
-                            más grande del mundo.</p>
+        <!-- Orador 5 -->
+        <div class="col-md-4">
+            <div class="card mx-1 orador-card">
+                <img src="Imagenes/Guido.jpeg" class="card-img-top orador-img img-fluid rounded" alt="Guido">
+                <div class="card-body">
+                    <div class="botones mb-3">
+                        <a href="#" class="btn btn-sm btn-info text-white">
+                            <img src="Imagenes/facebook.png" alt="Facebook" class="me-1"> Facebook
+                        </a>
+                        <a href="#" class="btn btn-sm btn-danger text-white">
+                            <img src="Imagenes/instagram.png" alt="Instagram" class="me-1"> Instagram
+                        </a>
                     </div>
+                    <h5 class="card-title">Guido van Rossum</h5>
+                    <p class="card-text">Credenciales: creador del lenguaje de programación Python, que es uno de
+                        los más versátiles y demandados en la actualidad.</p>
                 </div>
             </div>
+        </div>
 
-            <!-- Orador 5 -->
-            <div class="col-md-4">
-                <div class="card mx-1 orador-card">
-                    <img src="Imagenes/Guido.jpeg" class="card-img-top orador-img img-fluid rounded" alt="Guido">
-                    <div class="card-body">
-                        <div class="botones mb-3">
-                            <a href="#" class="btn btn-sm btn-info text-white">
-                                <img src="Imagenes/facebook.png" alt="Facebook" class="me-1"> Facebook
-                            </a>
-                            <a href="#" class="btn btn-sm btn-danger text-white">
-                                <img src="Imagenes/instagram.png" alt="Instagram" class="me-1"> Instagram
-                            </a>
-                        </div>
-                        <h5 class="card-title">Guido van Rossum</h5>
-                        <p class="card-text">Credenciales: creador del lenguaje de programación Python, que es uno de
-                            los más versátiles y demandados en la actualidad.</p>
+        <!-- Orador 6 -->
+        <div class="col-md-4">
+            <div class="card mx-1 orador-card">
+                <img src="Imagenes/Dennis.jpeg" class="card-img-top orador-img img-fluid rounded" alt="Dennis">
+                <div class="card-body">
+                    <div class="botones mb-3">
+                        <a href="#" class="btn btn-sm btn-info text-white">
+                            <img src="Imagenes/facebook.png" alt="Facebook" class="me-1"> Facebook
+                        </a>
+                        <a href="#" class="btn btn-sm btn-danger text-white">
+                            <img src="Imagenes/instagram.png" alt="Instagram" class="me-1"> Instagram
+                        </a>
                     </div>
-                </div>
-            </div>
-
-            <!-- Orador 6 -->
-            <div class="col-md-4">
-                <div class="card mx-1 orador-card">
-                    <img src="Imagenes/Dennis.jpeg" class="card-img-top orador-img img-fluid rounded" alt="Dennis">
-                    <div class="card-body">
-                        <div class="botones mb-3">
-                            <a href="#" class="btn btn-sm btn-info text-white">
-                                <img src="Imagenes/facebook.png" alt="Facebook" class="me-1"> Facebook
-                            </a>
-                            <a href="#" class="btn btn-sm btn-danger text-white">
-                                <img src="Imagenes/instagram.png" alt="Instagram" class="me-1"> Instagram
-                            </a>
-                        </div>
-                        <h5 class="card-title">Dennis Ritchie</h5>
-                        <p class="card-text">Credenciales: el “Padre del Lenguaje C”, Ritchie inició el desarrollo de
-                            este lenguaje en 1969 y, junto con sus colegas, creó el sistema operativo Unix.</p>
-                    </div>
+                    <h5 class="card-title">Dennis Ritchie</h5>
+                    <p class="card-text">Credenciales: el “Padre del Lenguaje C”, Ritchie inició el desarrollo de
+                        este lenguaje en 1969 y, junto con sus colegas, creó el sistema operativo Unix.</p>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
 
-    <!-- formulario oradores -->
-    <div class="container text-center mb-3">
-        <div class="mt-2 mb-1">
-            CONVIÉRTETE EN UN
+<!-- formulario oradores -->
+<div class="container text-center mb-3">
+    <div class="mt-2 mb-1">
+        CONVIÉRTETE EN UN
+    </div>
+    <div class="fs-3">
+        ORADOR
+    </div>
+    <div class="container-border">
+        <div class="mb-3">
+            Anótate como orador...
         </div>
-        <div class="fs-3">
-            ORADOR
-        </div>
-        <div class="container-border">
-            <div class="mb-3">
-                Anótate como orador...
-            </div>
-            <div>
-                <form action="server/procesarCompTicket.html" method="post">
-                    <div class="row ">
-                        <div class="col-md mb-3">
-                            <input type="text" name="nombre" id="nombre" placeholder="Nombre" class="form-control">
-                        </div>
-                        <div class="col-md mb-3">
-                            <input type="text" name="apellido" id="apellido" placeholder="Apellido"
-                                class="form-control">
-                        </div>
+        <div>
+            <form action="server/procesarCompTicket.html" method="post">
+                <div class="row ">
+                    <div class="col-md mb-3">
+                        <input type="text" name="nombre" id="nombre" placeholder="Nombre" class="form-control">
                     </div>
-                    <div class="row ">
-                        <div class="col-md mb-3">
-                            <textarea name="tema" id="tema" rows="5" class="form-control"
-                                placeholder="Sobre qué querés hablar?"></textarea>
-                        </div>
+                    <div class="col-md mb-3">
+                        <input type="text" name="apellido" id="apellido" placeholder="Apellido" class="form-control">
                     </div>
-                </form>
-            </div>
+                </div>
+                <div class="row ">
+                    <div class="col-md mb-3">
+                        <textarea name="tema" id="tema" rows="5" class="form-control"
+                            placeholder="Sobre qué querés hablar?"></textarea>
+                    </div>
+                </div>
+            </form>
         </div>
+    </div>
 
-        <div class="row">
-            <div class="col mb-3">
-                <input type="submit" value="Enviar" class="btn btn-warning btn-enviar">
-            </div>
+    <div class="row">
+        <div class="col mb-3">
+            <input type="submit" value="Enviar" class="btn btn-warning btn-enviar">
         </div>
+    </div>
 
-        <!-- foooter -->
-        <div class="bg-dark text-white p-3 d-flex justify-content-between">
-            2023 - DERECHOS RESERVADOS @
-            <img src="Imagenes/LOGO BA.png" alt="" class="w-25">
-        </div>
-        
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    <!-- foooter -->
+    <div class="bg-dark text-white p-3 d-flex justify-content-between">
+        2023 - DERECHOS RESERVADOS @
+        <img src="Imagenes/LOGO BA.png" alt="" class="w-25">
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
 
-</body>
+    </body>
 
-</html>
+    </html>

@@ -48,8 +48,6 @@
     color: #fff;
 }
 
-/* Resto del código permanece igual */
-
 /* Media Query para pantallas pequeñas (por ejemplo, smartphones) */
 @media (max-width: 767px) {
     #new-header {
