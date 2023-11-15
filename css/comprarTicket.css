@@ -52,7 +52,8 @@
 @media (max-width: 767px) {
     #new-header {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        text-align: center;
     }
 
     #new-header h1 {
@@ -61,7 +62,6 @@
     }
 
     #new-header .header-menu {
-        margin-left: 0;
         margin-top: 10px;
     }
 
@@ -79,7 +79,6 @@ body {
     padding: 0;
     position: relative;
 }
-
 
 /* Modo Oscuro para la Página */
 .bg-dark {
@@ -130,7 +129,6 @@ body {
     background-color: #333; /* Color de fondo gris oscuro para la sección de total a pagar */
 }
 
-
 /* Modo Oscuro para el Footer */
 .bg-dark.text-white {
     background-color: #333 !important;
@@ -144,32 +142,28 @@ body {
 /* Espaciado para Filas */
 .row {
     margin-bottom: 50px;
-    /* Ajusta el espacio entre el formulario y el footer */
-    display: flex;
-    justify-content: space-between;
 }
 
 /* Estilos del formulario de compra de tickets */
 .comprar-ticket-form {
     margin-bottom: 20px;
-    /* Ajusta el espacio entre el formulario y el footer */
-
 }
 
 #footer {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 65%;
+    width: 100%;
     height: 90px; /* Ajusta la altura según tus necesidades */
     background-color: #333 !important; /* Utiliza el mismo color de fondo */
     color: #fff; /* Utiliza el mismo color del texto */
-    text-align: right; /* Centra el contenido del footer */
-    line-height: 100px; /* Ajusta la altura de línea para centrar verticalmente */
-    margin: 0 auto; /* Centra horizontalmente el footer */
+    text-align: center; /* Centra el contenido del footer */
+    line-height: 1.5; /* Ajusta la altura de línea para centrar verticalmente */
+    margin-top: 50px; /* Ajusta el espacio entre el formulario y el footer */
 }
-#footer img {
-    width: cover; /* Ajusta el tamaño de la imagen según tus necesidades */
-    height: cover; /* Mantiene la proporción original de la imagen */
 
+#footer img {
+    width: 100%; /* Ajusta el tamaño de la imagen según tus necesidades */
+    max-width: 200px; /* Establece un ancho máximo para la imagen */
 }
