@@ -85,11 +85,6 @@ body {
     background-color: #111 !important;
 }
 
-body {
-    background-color: #000; /* Fondo negro */
-    color: #fff; /* Texto blanco */
-}
-
 .container {
     margin-top: 50px;
 }
@@ -166,4 +161,8 @@ body {
 #footer img {
     width: 100%; /* Ajusta el tamaño de la imagen según tus necesidades */
     max-width: 200px; /* Establece un ancho máximo para la imagen */
+}
+
+#Fecha {
+width: 10rem ;
 }

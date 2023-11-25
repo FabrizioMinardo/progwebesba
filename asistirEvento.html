@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Programacion web</title>
+    <link rel="icon" href="Imagenes/esba logo.jpg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="css\asistirEvento.css">
+</head>
+
+<body id="body" class="bg-dark">
+    <!-- Header -->
+    <div id="new-header">
+        <div class="header-logo">
+            <img src="Imagenes/LOGO BA.png" alt="Logo" class="w-25">
+            <h1>CONFERENCIAS B.A</h1>
+        </div>
+        <div class="header-menu">
+            <a href="index.html#carrusel">Las Conferencias</a>
+            <a href="index.html#Oradores">Los Oradores</a>
+            <a href="asistirEvento.html" class="text-warning">QUIERO ASISTIR!</a>
+        </div>
+    </div>
+</body>
+    <!-- Formulario para confirmar asistencia -->
+    <div class="container my-3">
+        <form id="asistirForm" class="needs-validation" novalidate>
+            <!-- Nombre y Apellido -->
+            <div class="row">
+                <div class="col-md mb-3">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" name="nombre" id="nombre" class="form-control" required>
+                    <div class="invalid-feedback">
+                        Por favor, ingresa tu nombre.
+                    </div>
+                </div>
+                <div class="col-md mb-3">
+                    <label for="apellido" class="form-label">Apellido</label>
+                    <input type="text" name="apellido" id="apellido" class="form-control" required>
+                    <div class="invalid-feedback">
+                        Por favor, ingresa tu apellido.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Campo de fecha con DatePicker -->
+            <div id="Fecha" class="row mb-3">
+                <div class="col-md mb-3">
+                    <label for="fecha" class="form-label">Elegir fecha</label>
+                    <input name="fecha" id="fecha" class="form-control" required readonly>
+                    <div class="invalid-feedback">
+                        Por favor, selecciona una fecha.
+                    </div>
+                    <script>
+                        $(document).ready(function () {
+                            $("#fecha").datepicker();
+                        });
+                    </script>
+                </div>
+            </div>
+
+            <!-- Nuevo elemento para mostrar un mensaje de confirmación o agradecimiento -->
+            <div id="mensaje-asistencia" class="mb-3">
+                <p class="text-success">¡Gracias por confirmar tu asistencia!</p>
+            </div>
+
+            <!-- Botón Confirmar Asistencia -->
+            <div class="row mb-3">
+                <button type="submit" class="btn btn-primary">Confirmar Asistencia</button>
+            </div>
+        </form>
+    </div>
+
+<script src="comprarTicket.js"></script>
+</form>
+</div>
+
+<!-- footer -->
+<div id="footer" class="bg-dark text-white p-3 d-flex justify-content-between">
+    2023 - DERECHOS RESERVADOS @
+    <img src="Imagenes/LOGO BA.png" alt="" class="w-25">
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+</html>
