@@ -1,10 +1,7 @@
 $(document).ready(function () {
-    // Obtener la fecha actual
-    var fechaActual = new Date();
-    
     // Inicializar el datepicker con restricciones de fechas
     $("#fecha").datepicker({
-        minDate: fechaActual, // Solo permitir fechas a partir de hoy
+        minDate: 0, // Solo permitir fechas a partir de hoy
         maxDate: new Date('November 30, 2024'), // Hasta noviembre de 2024
         beforeShowDay: function (date) {
             return [esDiaFinDeSemana(date.getDay())];
@@ -16,7 +13,7 @@ $(document).ready(function () {
             }
             actualizarHorarios();
         }
-    });
+    }).datepicker("option", $.datepicker.regional["es"]);
 
     // Configuración de horarios para sábados y domingos
     var horariosDisponibles = ["10:00 AM", "2:00 PM"]; // Puedes ajustar los horarios según tus necesidades
@@ -39,37 +36,7 @@ $(document).ready(function () {
         // Puedes realizar acciones adicionales aquí después de enviar el formulario
     }
 
-    // Resto del código...
-
-    // Funciones de ayuda
-    function esDiaValido() {
-        var selectedDate = $("#fecha").datepicker("getDate");
-
-        if (!selectedDate) {
-            return false;
-        }
-
-        var selectedDay = selectedDate.getDay();
-        return esDiaFinDeSemana(selectedDay);
-    }
-
-    function esDiaFinDeSemana(day) {
-        return day === 5 || day === 6 || day === 0;
-    }
-
-    function habilitarHorarios() {
-        horariosSelect.prop('disabled', false);
-        horariosSelect.empty();
-        for (var i = 0; i < horariosDisponibles.length; i++) {
-            horariosSelect.append(new Option(horariosDisponibles[i], horariosDisponibles[i]));
-        }
-    }
-
-    function deshabilitarHorarios() {
-        horariosSelect.prop('disabled', true);
-        horariosSelect.empty();
-    }
-
+    // Función para actualizar los horarios disponibles según el día seleccionado
     function actualizarHorarios() {
         var selectedDate = $("#fecha").datepicker("getDate");
 
@@ -86,6 +53,7 @@ $(document).ready(function () {
         }
     }
 
+    // Función para validar el formulario
     function validarFormulario() {
         var nombre = $("#nombre").val();
         var apellido = $("#apellido").val();
@@ -106,7 +74,38 @@ $(document).ready(function () {
         return true;
     }
 
+    // Función para validar que la fecha sea un viernes, sábado o domingo
+    function esDiaValido() {
+        var selectedDate = $("#fecha").datepicker("getDate");
+
+        if (!selectedDate) {
+            return false;
+        }
+
+        var selectedDay = selectedDate.getDay();
+        return esDiaFinDeSemana(selectedDay);
+    }
+
+    // Función para mostrar mensajes de error
     function mostrarMensajeError(mensaje) {
         $("#mensaje-asistencia").html('<p class="text-danger">' + mensaje + '</p>').show();
+    }
+
+    // Funciones de ayuda
+    function esDiaFinDeSemana(day) {
+        return day === 5 || day === 6 || day === 0;
+    }
+
+    function habilitarHorarios() {
+        horariosSelect.prop('disabled', false);
+        horariosSelect.empty();
+        for (var i = 0; i < horariosDisponibles.length; i++) {
+            horariosSelect.append(new Option(horariosDisponibles[i], horariosDisponibles[i]));
+        }
+    }
+
+    function deshabilitarHorarios() {
+        horariosSelect.prop('disabled', true);
+        horariosSelect.empty();
     }
 });
