@@ -23,59 +23,59 @@
         </div>
         <div class="header-menu">
             <a href="index.html#carrusel">Las Conferencias</a>
-            <a href="index.html#Oradores">Los Oradores</a>
+            <a href="oradores.php">Los Oradores</a>
             <a href="asistirEvento.html" class="text-warning">QUIERO ASISTIR!</a>
         </div>
     </div>
 </body>
-    <!-- Formulario para confirmar asistencia -->
-    <div class="container my-3">
-        <form id="asistirForm" class="needs-validation" novalidate>
-            <!-- Nombre y Apellido -->
-            <div class="row">
-                <div class="col-md mb-3">
-                    <label for="nombre" class="form-label">Nombre</label>
-                    <input type="text" name="nombre" id="nombre" class="form-control" required>
-                    <div class="invalid-feedback">
-                        Por favor, ingresa tu nombre.
-                    </div>
-                </div>
-                <div class="col-md mb-3">
-                    <label for="apellido" class="form-label">Apellido</label>
-                    <input type="text" name="apellido" id="apellido" class="form-control" required>
-                    <div class="invalid-feedback">
-                        Por favor, ingresa tu apellido.
-                    </div>
+<!-- Formulario para confirmar asistencia -->
+<div class="container my-3">
+    <form id="asistirForm" class="needs-validation" novalidate>
+        <!-- Nombre y Apellido -->
+        <div class="row">
+            <div class="col-md mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" name="nombre" id="nombre" class="form-control" required>
+                <div class="invalid-feedback">
+                    Por favor, ingresa tu nombre.
                 </div>
             </div>
-
-            <!-- Campo de fecha con DatePicker -->
-            <div id="Fecha" class="row mb-3">
-                <div class="col-md mb-3">
-                    <label for="fecha" class="form-label">Elegir fecha</label>
-                    <input name="fecha" id="fecha" class="form-control" required readonly>
-                    <div class="invalid-feedback">
-                        Por favor, selecciona una fecha.
-                    </div>
-                    <script>
-                        $(document).ready(function () {
-                            $("#fecha").datepicker();
-                        });
-                    </script>
+            <div class="col-md mb-3">
+                <label for="apellido" class="form-label">Apellido</label>
+                <input type="text" name="apellido" id="apellido" class="form-control" required>
+                <div class="invalid-feedback">
+                    Por favor, ingresa tu apellido.
                 </div>
             </div>
+        </div>
 
-            <!-- Nuevo elemento para mostrar un mensaje de confirmación o agradecimiento -->
-            <div id="mensaje-asistencia" class="mb-3">
-                <p class="text-success">¡Gracias por confirmar tu asistencia!</p>
+        <!-- Campo de fecha con DatePicker -->
+        <div id="Fecha" class="row mb-3">
+            <div class="col-md mb-3">
+                <label for="fecha" class="form-label">Elegir fecha</label>
+                <input name="fecha" id="fecha" class="form-control" required readonly>
+                <div class="invalid-feedback">
+                    Por favor, selecciona una fecha.
+                </div>
+                <script>
+                    $(document).ready(function () {
+                        $("#fecha").datepicker();
+                    });
+                </script>
             </div>
+        </div>
 
-            <!-- Botón Confirmar Asistencia -->
-            <div class="row mb-3">
-                <button type="submit" class="btn btn-primary">Confirmar Asistencia</button>
-            </div>
-        </form>
-    </div>
+        <!-- Nuevo elemento para mostrar un mensaje de confirmación o agradecimiento -->
+        <div id="mensaje-asistencia" class="mb-3">
+            <p class="text-success">¡Gracias por confirmar tu asistencia!</p>
+        </div>
+
+        <!-- Botón Confirmar Asistencia -->
+        <div class="row mb-3">
+            <button type="submit" class="btn btn-primary">Confirmar Asistencia</button>
+        </div>
+    </form>
+</div>
 
 <script src="comprarTicket.js"></script>
 </form>

@@ -1,0 +1,160 @@
+/* Estilos del Header en la página de compra de tickets */
+#new-header {
+    background-color: #1d76ce;
+    color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+#new-header h1 {
+    margin: 0;
+    font-size: 2em;
+    text-shadow: 2px 2px 4px #0a4678, 2px 2px 6px #0a4678;
+    color: #e6ac00;
+    transition: color 0.3s ease;
+}
+
+#new-header .header-logo {
+    display: flex;
+    align-items: center;
+}
+
+#new-header .header-menu {
+    display: flex;
+    gap: 30px;
+}
+
+#new-header a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: color 0.3s ease;
+}
+
+#new-header a:hover {
+    text-decoration: underline;
+    color: #ffcc00;
+}
+
+#new-header:hover {
+    background-color: #155799;
+}
+
+#new-header:hover h1 {
+    color: #fff;
+}
+
+/* Media Query para pantallas pequeñas (por ejemplo, smartphones) */
+@media (max-width: 767px) {
+    #new-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #new-header h1 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+
+    #new-header .header-menu {
+        margin-top: 10px;
+    }
+
+    #new-header a {
+        font-size: 1em;
+    }
+}
+
+/* Estilos Generales */
+body {
+    background-color: #111;
+    color: #f8f8f8;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+h1 {
+    text-align: center;
+    color: #f8f8f8;
+}
+
+.container-fluid {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s, transform 1s;
+}
+
+.container-fluid.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Modo Oscuro para la Página */
+.bg-dark {
+    background-color: #111 !important;
+}
+
+/* Navbar */
+.custom-celeste-bg {
+    background-color: #1d76ce;
+}
+
+/* Espaciado para Filas */
+.row {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+li {
+    margin-bottom: 20px;
+    flex: 1 1 calc(33.333% - 20px);
+    background-color: #3d3d3d;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column; /* Asegura que la imagen esté debajo del texto */
+    align-items: center; /* Centra el contenido en el contenedor */
+}
+
+li img {
+    max-width: 100%;
+    max-height: 150px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 10px; /* Agrega un poco de espacio entre el texto y la imagen */
+}
+
+#footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 90px; /* Ajusta la altura según tus necesidades */
+    background-color: #333 !important; /* Utiliza el mismo color de fondo */
+    color: #fff; /* Utiliza el mismo color del texto */
+    text-align: center; /* Centra el contenido del footer */
+    line-height: 1.5; /* Ajusta la altura de línea para centrar verticalmente */
+    margin-top: 50px; /* Ajusta el espacio entre el formulario y el footer */
+}
+
+#footer img {
+    width: 20%; /* Ajusta el tamaño de la imagen según tus necesidades */
+    max-width: 200px; /* Establece un ancho máximo para la imagen */
+}

@@ -1,59 +1,111 @@
 $(document).ready(function () {
-    // Inicializar el datepicker
-    $("#fecha").datepicker();
+    // Obtener la fecha actual
+    var fechaActual = new Date();
+    
+    // Inicializar el datepicker con restricciones de fechas
+    $("#fecha").datepicker({
+        minDate: fechaActual, // Solo permitir fechas a partir de hoy
+        maxDate: new Date('November 30, 2024'), // Hasta noviembre de 2024
+        beforeShowDay: function (date) {
+            return [esDiaFinDeSemana(date.getDay())];
+        },
+        onSelect: function (dateText, inst) {
+            if (!esDiaValido()) {
+                mostrarMensajeError("Por favor, selecciona una fecha válida (viernes, sábado o domingo).");
+                return;
+            }
+            actualizarHorarios();
+        }
+    });
+
+    // Configuración de horarios para sábados y domingos
+    var horariosDisponibles = ["10:00 AM", "2:00 PM"]; // Puedes ajustar los horarios según tus necesidades
+    var horariosSelect = $("#horario");
+
+    // Llamar a la función de actualización cuando se carga la página
+    actualizarHorarios();
 
     // Función para validar el formulario al enviar
     $("#asistirForm").submit(function (event) {
-        // Evitar que el formulario se envíe automáticamente
         event.preventDefault();
-
-        // Realizar validaciones aquí
         if (validarFormulario()) {
-            // Enviar el formulario si es válido
             enviarFormulario();
         }
     });
 
-    // Función para validar el formulario
-    function validarFormulario() {
-        // Obtener los valores de los campos
-        var nombre = $("#nombre").val();
-        var apellido = $("#apellido").val();
-        var fecha = $("#fecha").val();
+    // Función para enviar el formulario
+    function enviarFormulario() {
+        $("#mensaje-asistencia").html('<p class="text-success">¡Gracias por confirmar tu asistencia!</p>').show();
+        // Puedes realizar acciones adicionales aquí después de enviar el formulario
+    }
 
-        // Realizar las validaciones necesarias
-        if (nombre === "" || apellido === "") {
-            mostrarMensajeError("Por favor, completa todos los campos del formulario.");
-            return false; // El formulario no es válido
+    // Resto del código...
+
+    // Funciones de ayuda
+    function esDiaValido() {
+        var selectedDate = $("#fecha").datepicker("getDate");
+
+        if (!selectedDate) {
+            return false;
         }
 
-        // Validar la fecha
-        if (!validarFecha(fecha)) {
-            mostrarMensajeError("Por favor, selecciona una fecha válida.");
-            return false; // El formulario no es válido
+        var selectedDay = selectedDate.getDay();
+        return esDiaFinDeSemana(selectedDay);
+    }
+
+    function esDiaFinDeSemana(day) {
+        return day === 5 || day === 6 || day === 0;
+    }
+
+    function habilitarHorarios() {
+        horariosSelect.prop('disabled', false);
+        horariosSelect.empty();
+        for (var i = 0; i < horariosDisponibles.length; i++) {
+            horariosSelect.append(new Option(horariosDisponibles[i], horariosDisponibles[i]));
+        }
+    }
+
+    function deshabilitarHorarios() {
+        horariosSelect.prop('disabled', true);
+        horariosSelect.empty();
+    }
+
+    function actualizarHorarios() {
+        var selectedDate = $("#fecha").datepicker("getDate");
+
+        if (!selectedDate) {
+            return;
+        }
+
+        var selectedDay = selectedDate.getDay();
+
+        if (esDiaFinDeSemana(selectedDay)) {
+            habilitarHorarios();
+        } else {
+            deshabilitarHorarios();
+        }
+    }
+
+    function validarFormulario() {
+        var nombre = $("#nombre").val();
+        var apellido = $("#apellido").val();
+        var horario = $("#horario").val();
+
+        if (nombre === "" || apellido === "" || horario === "") {
+            mostrarMensajeError("Por favor, completa todos los campos del formulario.");
+            return false;
+        }
+
+        if (!esDiaValido()) {
+            mostrarMensajeError("Por favor, selecciona una fecha válida (viernes, sábado o domingo).");
+            return false;
         }
 
         // Puedes agregar más validaciones según tus necesidades
 
-        return true; // El formulario es válido
+        return true;
     }
 
-    // Función para validar la fecha
-    function validarFecha(fecha) {
-        // Puedes implementar una lógica más avanzada para validar la fecha si es necesario
-        return fecha !== "";
-    }
-
-    // Función para enviar el formulario
-    function enviarFormulario() {
-        // Aquí puedes agregar lógica para enviar el formulario, por ejemplo, a través de AJAX
-        // También puedes mostrar un mensaje de confirmación, redirigir a otra página, etc.
-        $("#mensaje-asistencia").html('<p class="text-success">¡Gracias por confirmar tu asistencia!</p>').show();
-        
-        // Puedes realizar acciones adicionales aquí después de enviar el formulario
-    }
-
-    // Función para mostrar mensajes de error
     function mostrarMensajeError(mensaje) {
         $("#mensaje-asistencia").html('<p class="text-danger">' + mensaje + '</p>').show();
     }

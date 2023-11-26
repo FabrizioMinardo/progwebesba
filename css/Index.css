@@ -51,22 +51,29 @@
 /* Media Query para pantallas pequeñas (por ejemplo, smartphones) */
 @media (max-width: 767px) {
     #new-header {
-        flex-direction: column; /* Cambia la dirección de flex a columna para mejor apilamiento en pantallas pequeñas */
-        align-items: flex-start; /* Alinea los elementos al principio */
+        flex-direction: column;
+        /* Cambia la dirección de flex a columna para mejor apilamiento en pantallas pequeñas */
+        align-items: flex-start;
+        /* Alinea los elementos al principio */
     }
 
     #new-header h1 {
-        font-size: 1.5em; /* Reduce el tamaño del título en pantallas pequeñas */
-        margin-bottom: 10px; /* Añade un pequeño espacio entre el logo y el título */
+        font-size: 1.5em;
+        /* Reduce el tamaño del título en pantallas pequeñas */
+        margin-bottom: 10px;
+        /* Añade un pequeño espacio entre el logo y el título */
     }
 
     #new-header .header-menu {
-        margin-left: 0; /* Elimina el margen izquierdo en pantallas pequeñas */
-        margin-top: 10px; /* Añade un pequeño espacio entre el título y el menú */
+        margin-left: 0;
+        /* Elimina el margen izquierdo en pantallas pequeñas */
+        margin-top: 10px;
+        /* Añade un pequeño espacio entre el título y el menú */
     }
-    
+
     #new-header a {
-        font-size: 1em; /* Reduce el tamaño de los enlaces en pantallas pequeñas */
+        font-size: 1em;
+        /* Reduce el tamaño de los enlaces en pantallas pequeñas */
     }
 }
 
@@ -196,7 +203,7 @@ body {
     width: 50%;
     height: 40px;
     color: #111;
-    background-color:#FFCC00 ;
+    background-color: #FFCC00;
     border: 2px solid #FFCC00;
     border-radius: 5px;
     cursor: pointer;
@@ -240,7 +247,6 @@ body {
 .orador-card:hover .orador-img {
     height: 100%;
 }
-
 
 .card-title {
     margin: 0;
@@ -293,7 +299,6 @@ body {
     justify-content: space-around;
     margin-top: 0.8rem;
 }
-
 
 .orador-card:hover .card-body {
     height: 100%;
