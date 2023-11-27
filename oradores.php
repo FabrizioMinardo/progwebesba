@@ -21,7 +21,7 @@
             <a href="asistirEvento.html" class="text-warning">QUIERO ASISTIR!</a>
         </div>
     </div>
-    <h1>Listado de oradores de nuestra base de datos</h1>
+    <h1>Listado de oradores principales de nuestra base de datos</h1>
 
     <!-- Programación en PHP -->
     <?php
@@ -58,7 +58,8 @@ if ($query && $query->num_rows > 0) {
     <ul>
         <?php
         $long = count($oradores);
-        for ($i = 0; $i < $long; $i++) {
+        $limit = min($long, 6); // Limitar a los primeros 6 oradores
+        for ($i = 0; $i < $limit; $i++) {
             ?>
             <li>
                 <?php
@@ -76,6 +77,47 @@ if ($query && $query->num_rows > 0) {
         }
         ?>
     </ul>
+
+    <h1>Listado de oradores registrados</h1>
+
+<!--  oradores anotados -->
+<?php
+$queryRegistrados = $mysqli->query("SELECT NombreOradorAnotado, ApellidoOradorAnotado, DescripcionOradorAnotado
+FROM oradoresAnotados;");
+
+if (!$queryRegistrados) {
+    die("Error en la consulta de oradores registrados: " . $mysqli->error);
+}
+
+$oradoresRegistrados = [];
+if ($queryRegistrados && $queryRegistrados->num_rows > 0) {
+    while ($resultado = $queryRegistrados->fetch_assoc()) {
+        $oradoresRegistrados[] = $resultado;
+    }
+} else {
+    echo "No hay oradores registrados.";
+}
+?>
+
+<!-- Mostrar lista de oradores registrados -->
+<ul>
+    <?php
+    foreach ($oradoresRegistrados as $oradorRegistrado) {
+        ?>
+        <li>
+            <?php
+            echo $oradorRegistrado['NombreOradorAnotado'];
+            echo " ";
+            echo $oradorRegistrado['ApellidoOradorAnotado'];
+            echo ", va a hablar sobre: ";
+            echo $oradorRegistrado['DescripcionOradorAnotado'];
+            ?>
+        </li>
+        <?php
+    }
+    ?>
+</ul>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 <!-- Footer -->
