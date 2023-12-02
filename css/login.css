@@ -85,63 +85,63 @@ body {
     background-color: #111 !important;
 }
 
-.container {
-    margin-top: 50px;
+/* Estilos específicos para el formulario de login */
+.login-container {
+    width: 60%;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+form {
+    text-align: left;
+}
+
+.form-outline {
+    position: relative;
 }
 
 .form-label {
-    font-size: 1.2rem;
-    color: #fff; /* Texto blanco */
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 16px;
+    color: #999;
+    pointer-events: none;
+    transition: 0.2s ease-out;
 }
 
-.form-control, .form-select {
-    background-color: #333; /* Color de fondo gris oscuro */
-    color: #fff; /* Texto blanco */
-    border: 1px solid #fff; /* Borde blanco */
+input:focus+.form-label,
+input:valid+.form-label {
+    top: -20px;
+    left: 0;
+    font-size: 14px;
+    color: #333;
 }
 
-.form-control:focus, .form-select:focus {
-    background-color: #555; /* Color de fondo más oscuro al hacer foco */
+#boton-login {
+    width: 100%;
+    max-width: 200px;
+    height: auto; 
+}
+
+
+button {
+    background-color: #333;
+    height: auto;
+    border: none;
+    width: 10%;
     color: #fff;
-    border: 1px solid #fff;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.btn-primary {
-    background-color: #2d8999; /* Color de fondo verde oscuro */
-    border: 1px solid #2d8997;
-}
-
-.btn-primary:hover {
-    background-color: #45a049; /* Color más oscuro al hacer hover */
-    border: 1px solid #45a049;
-}
-
-#total {
-    color: #c4ba35; /* Color rosa oscuro para el total a pagar */
-}
-
-.bg-info {
-    background-color: #333; /* Color de fondo gris oscuro para la sección de total a pagar */
-}
-
-/* Modo Oscuro para el Footer */
-.bg-dark.text-white {
-    background-color: #333 !important;
-}
-
-/* Navbar */
-.custom-celeste-bg {
-    background-color: #1d76ce;
-}
-
-/* Espaciado para Filas */
-.row {
-    margin-bottom: 50px;
-}
-
-/* Estilos del formulario de compra de tickets */
-.comprar-ticket-form {
-    margin-bottom: 20px;
+button:hover {
+    background-color: #d49900;
 }
 
 #footer {
@@ -163,6 +163,3 @@ body {
     max-width: 200px;
 }
 
-#Fecha {
-width: 10rem ;
-}

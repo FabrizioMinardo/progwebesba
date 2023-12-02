@@ -23,7 +23,6 @@
     </div>
     <h1>Listado de oradores principales de nuestra base de datos</h1>
 
-    <!-- Programación en PHP -->
     <?php
     // Variables de la conexión a la DB
     $mysqli = new mysqli("localhost", "root", "", "programacion web");
