@@ -85,8 +85,6 @@ $(document).ready(function () {
             return false;
         }
 
-        // Puedes agregar más validaciones según tus necesidades
-
         return true;
     }
 
