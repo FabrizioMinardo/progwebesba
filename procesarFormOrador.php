@@ -18,18 +18,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             die("Error de conexión: " . $mysqli->connect_error);
         }
 
-        // Ejecutamos consulta SQL en MySQL
-        $query = "INSERT INTO oradoresAnotados (NombreOradorAnotado, ApellidoOradorAnotado, DescripcionOradorAnotado) VALUES ('$nombre', '$apellido', '$tema')";
+        // Verificar si el orador ya está registrado
+        $verificarQuery = "SELECT * FROM oradoresAnotados WHERE NombreOradorAnotado = '$nombre' AND ApellidoOradorAnotado = '$apellido'";
+        $resultado = $mysqli->query($verificarQuery);
 
-        // Ejecutar la consulta y verificar si fue exitosa
-        if ($mysqli->query($query) === TRUE) {
-            echo "¡Orador registrado correctamente!";
+        if ($resultado->num_rows > 0) {
+            echo "Error. El orador ya está registrado.";
+            header("refresh:2;url=index.html");
         } else {
-            // Si hay un error de duplicación, puedes manejarlo aquí
-            if ($mysqli->errno == 1062) {
-                echo "El orador ya está registrado.";
+            // Ejecutamos consulta SQL en MySQL
+            $query = "INSERT INTO oradoresAnotados (NombreOradorAnotado, ApellidoOradorAnotado, DescripcionOradorAnotado) VALUES ('$nombre', '$apellido', '$tema')";
+
+            // Ejecutar la consulta y verificar si fue exitosa
+            if ($mysqli->query($query) === TRUE) {
+                echo "¡Orador registrado correctamente!";
+                // Redirigir a la página principal después de 2 segundos
+                header("refresh:2;url=index.html");
             } else {
+                // Si hay un error de duplicación u otro error, puedes manejarlo aquí
                 echo "Error al guardar los datos: " . $mysqli->error;
+                header("refresh:2;url=index.html");
             }
         }
 

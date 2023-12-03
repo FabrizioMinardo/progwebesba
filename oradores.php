@@ -123,5 +123,6 @@ if ($queryRegistrados && $queryRegistrados->num_rows > 0) {
 <div id="footer" class="bg-dark text-white p-3 d-flex flex-column align-items-center justify-content-center">
     2023 - DERECHOS RESERVADOS @
     <img src="Imagenes/LOGO BA.png" alt="" class="w-25 mt-3">
+    <a href="login.php" id="boton-admin" class="btn btn-info">SOY ADMIN</a>
 </div>
 </html>

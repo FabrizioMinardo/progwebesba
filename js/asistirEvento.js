@@ -1,22 +1,38 @@
+// Definir la fecha actual
+var fechaActual = new Date();
+
 $(document).ready(function () {
-    // Inicializar el datepicker con restricciones de fechas
-    $("#fecha").datepicker({
-        minDate: 0, // Solo permitir fechas a partir de hoy
-        maxDate: new Date('November 30, 2024'), // Hasta noviembre de 2024
+    // Elemento para mostrar mensaje de fecha incorrecta
+    var mensajeFechaIncorrecta = $("<p class='text-danger'>Elige una fecha válida (viernes, sábado o domingo).</p>");
+    
+    // Insertar mensaje en el DOM
+    mensajeFechaIncorrecta.insertAfter("#fecha");
+
+    // Ocultar el mensaje inicialmente
+    mensajeFechaIncorrecta.hide();
+
+     // Inicializar el datepicker con restricciones de fechas
+     $("#fecha").datepicker({
+        minDate: fechaActual, // Solo permitir fechas a partir de hoy
         beforeShowDay: function (date) {
-            return [esDiaFinDeSemana(date.getDay())];
+            var diaSemana = date.getDay();
+            var esFinDeSemana = diaSemana === 5 || diaSemana === 6 || diaSemana === 0;
+            var esFechaFutura = date >= fechaActual;
+            return [esFinDeSemana && esFechaFutura, ''];
         },
         onSelect: function (dateText, inst) {
             if (!esDiaValido()) {
-                mostrarMensajeError("Por favor, selecciona una fecha válida (viernes, sábado o domingo).");
-                return;
+                mostrarMensajeFechaIncorrecta(true);
+            } else {
+                mostrarMensajeFechaIncorrecta(false);
             }
-            actualizarHorarios();
+            // Resto de tu código onSelect
+            console.log('Fecha seleccionada:', dateText);
         }
     }).datepicker("option", $.datepicker.regional["es"]);
 
     // Configuración de horarios para sábados y domingos
-    var horariosDisponibles = ["10:00 AM", "2:00 PM"]; // Puedes ajustar los horarios según tus necesidades
+    var horariosDisponibles = ["10:00 AM", "2:00 PM"];
     var horariosSelect = $("#horario");
 
     // Llamar a la función de actualización cuando se carga la página
@@ -107,5 +123,14 @@ $(document).ready(function () {
     function deshabilitarHorarios() {
         horariosSelect.prop('disabled', true);
         horariosSelect.empty();
+    }
+
+    // Función para mostrar u ocultar el mensaje de fecha incorrecta
+    function mostrarMensajeFechaIncorrecta(mostrar) {
+        if (mostrar) {
+            mensajeFechaIncorrecta.show();
+        } else {
+            mensajeFechaIncorrecta.hide();
+        }
     }
 });
