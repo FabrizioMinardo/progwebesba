@@ -23,12 +23,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Ejecutar la consulta y verificar si fue exitosa
     if ($mysqli->query($query) === TRUE) {
         echo "¡Datos guardados correctamente!";
+        header("refresh:2;url=asistirEvento.html");
     } else {
         // Si hay un error de duplicación, puedes manejarlo aquí
         if ($mysqli->errno == 1062) {
             echo "El participante ya está registrado.";
+            header("refresh:2;url=asistirEvento.html");
         } else {
             echo "Error al guardar los datos: " . $mysqli->error;
+            header("refresh:2;url=asistirEvento.html");
         }
     }
 
