@@ -6,6 +6,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $apellido = $_POST["apellido"];
     $tema = $_POST["tema"];
 
+     // Verificar campos vacíos
+     if (empty($nombre) || empty($apellido) || empty($tema)) {
+        echo "Por favor, completa todos los campos del formulario.";
+        header("refresh:2;url=index.html");
+        exit;  // Salir del script
+    }
+
     // Verificacion de la longitud del tema
     if (strlen($tema) > 199) {
         echo "Error: El tema no puede tener más de 199 caracteres.";
@@ -35,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // Redirigir a la página principal después de 2 segundos
                 header("refresh:2;url=index.html");
             } else {
-                // Si hay un error de duplicación u otro error, puedes manejarlo aquí
+                // Si hay un error de duplicación u otro error
                 echo "Error al guardar los datos: " . $mysqli->error;
                 header("refresh:2;url=index.html");
             }
