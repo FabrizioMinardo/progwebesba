@@ -1,4 +1,4 @@
-/* Estilos del Header */
+/* Estilos del Header en la página de compra de tickets */
 #new-header {
     background-color: #1d76ce;
     color: #fff;
@@ -52,28 +52,21 @@
 @media (max-width: 767px) {
     #new-header {
         flex-direction: column;
-        /* Cambia la dirección de flex a columna para mejor apilamiento en pantallas pequeñas */
-        align-items: flex-start;
-        /* Alinea los elementos al principio */
+        align-items: center;
+        text-align: center;
     }
 
     #new-header h1 {
         font-size: 1.5em;
-        /* Reduce el tamaño del título en pantallas pequeñas */
         margin-bottom: 10px;
-        /* Añade un pequeño espacio entre el logo y el título */
     }
 
     #new-header .header-menu {
-        margin-left: 0;
-        /* Elimina el margen izquierdo en pantallas pequeñas */
         margin-top: 10px;
-        /* Añade un pequeño espacio entre el título y el menú */
     }
 
     #new-header a {
         font-size: 1em;
-        /* Reduce el tamaño de los enlaces en pantallas pequeñas */
     }
 }
 
@@ -166,12 +159,8 @@ body {
 
 
 .title1 {
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    font-size: 2rem;
-}
-
-.title2 {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
     font-size: 3rem;
 }
 
@@ -342,19 +331,49 @@ body {
     justify-content: space-between;
 }
 
+#footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 90px; 
+    background-color: #333 !important;
+    color: #fff;
+    text-align: center;
+    line-height: 1.5; /* Ajusta la altura de línea para centrar verticalmente */
+    margin-top: 20px;
+}
+
+#footer img {
+    width: 20%; /* Ajusta el tamaño de la imagen según tus necesidades */
+    max-width: 200px; /* Establece un ancho máximo para la imagen */
+}
+
 #boton-admin {
     position: absolute;
-    bottom: 8px;
-    left: 8px;
+    bottom: 0%;
+    left: 1%;
     background-color: #333; 
     color: #fff; 
-    padding: 4px 8px;
+    padding: 2% 4%; /* Utiliza porcentajes para el padding */
     border: none;
-    border-bottom: 2px solid #ffffff; /* Añade un borde inferior para el efecto subrayado */
     cursor: pointer;
+    font-size: 0.6em; /* Tamaño del texto */
+    transition: all 0.3s; /* Agrega transición para un cambio suave */
 }
 
 #boton-admin:hover {
     background-color: #ffffff;
     color: #333;
+}
+
+@media screen and (max-width: 768px) {
+    #boton-admin {
+        position: relative;
+        bottom: auto;
+        margin-top: 1%;
+        padding: 1% 2%; /* Ajusta el padding para pantallas más pequeñas */
+        font-size: 0.4em; /* Ajusta el tamaño del texto para pantallas más pequeñas */
+    }
 }
