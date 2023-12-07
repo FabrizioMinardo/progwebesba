@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($result->num_rows > 0) {
         // Cambiamos el mensaje a una variable de sesión
         session_start();
-        $_SESSION["mensaje"] = "¡Bienvenido!";
+        $_SESSION["mensaje"] = "¡Bienvenido! Ingresa tu email y contraseña.";
         // Redireccionamos al usuario
         header("Location: paginaAdmin.php");
         exit();
