@@ -63,7 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="header-menu">
             <a href="index.html#carrusel">Conferencias</a>
             <a href="oradores.php">Oradores</a>
-            <a href="asistirEvento.html" class="text-warning">¡QUIERO ASISTIR!</a>
+            <a href="asistirEvento.html">¡QUIERO ASISTIR!</a>
         </div>
     </div>
     <section class="vh-100">

@@ -1,4 +1,4 @@
-/* Estilos del Header en la página de compra de tickets */
+/* Estilos del Header */
 #new-header {
     background-color: #1d76ce;
     color: #fff;
@@ -12,8 +12,8 @@
 #new-header h1 {
     margin: 0;
     font-size: 2em;
-    text-shadow: 2px 2px 4px #0a4678, 2px 2px 6px #0a4678;
-    color: #e6ac00;
+    text-shadow: 2px 2px 4px #0a4678, 2px 2px 6px #d6d6d6;
+    color: #fff;
     transition: color 0.3s ease;
 }
 
@@ -56,9 +56,19 @@
         text-align: center;
     }
 
+    #new-header .header-logo {
+        margin-bottom: 1em; /* Ajusta el margen inferior del logo */
+    }
+
+    #new-header img {
+        width: 150px; /* Ajusta el tamaño del logo */
+        height: auto; /* Mantiene la proporción */
+    }
+
     #new-header h1 {
-        font-size: 1.5em;
-        margin-bottom: 10px;
+        font-size: 2em; /* Ajusta el tamaño del h1 en relación con el logo */
+        margin: 0; /* Elimina el margen para alinear con el logo */
+        text-shadow: 2px 2px 4px #0a4678, 2px 2px 6px #d6d6d6;
     }
 
     #new-header .header-menu {
@@ -82,7 +92,6 @@
 #new-header:hover h1 {
     color: #fff;
 }
-
 
 /* Estilos Generales */
 body {
